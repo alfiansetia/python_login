@@ -36,8 +36,8 @@ form_absen = {
         'comp_id' : '1082',
         'no_induk' : '60218224',
         'geoloc_addr' : random.choice(alamat),
-        'dateString' : '2021-12-13 18:05',
-        #'dateString' : waktu_sekarang
+        #'dateString' : '2021-12-13 18:05',
+        'dateString' : waktu_sekarang
 }
 
 form_login = {
