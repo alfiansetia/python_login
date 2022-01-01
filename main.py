@@ -7,7 +7,8 @@ now = datetime.datetime.now()
 waktu_sekarang = now.strftime("%Y-%m-%d %H:%M")
 alamat = [
         "Bekasi, RT.003RW.005 Kav C3, RT.003RW.005, Kali Baru, Medan Satria, Bekasi City, West Java 17132, Indonesia",
-        "Bizpark 3, Blok C No. 9, Jl. Sultan Agung No.Km 28,5, RT.003/RW.005, Kali Baru, Medan Satria, Bekasi City, West Java 17>]
+        "Bizpark 3, Blok C No. 9, Jl. Sultan Agung No.Km 28,5, RT.003/RW.005, Kali Baru, Medan Satria, Bekasi City, West Java 17"
+]
 
 url_login = "https://vast-viovera.co.id"
 url_home = "https://vast-viovera.co.id/home"
