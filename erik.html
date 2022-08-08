@@ -489,19 +489,19 @@
 
                     <div class="flex flex-col">
                         <p class="text-slate-700">Nama</p>
-                        <input type="text" name="nama" placeholder="nama depan"
+                        <input type="text" name="nama" placeholder="nama depan" id="nama"
                             class="px-3 py-3 border border-blue-500 rounded-md" value="fasfas@dsfd.dsgf">
                     </div>
                     <div class="flex flex-col">
                         <p class="text-slate-700">Email <small class="text-pink-700">invoice dikirim ke email</small>
                         </p>
-                        <input type="email" name="email" placeholder="email"
+                        <input type="email" name="email" placeholder="email" id="email"
                             class="px-3 py-3 border border-blue-500 rounded-md" value="fasfas@dsfd.dsgf">
                     </div>
                     <div class="flex flex-col">
                         <p class="text-slate-700">No Whatsapp Aktif <small class="text-pink-700"></small>
                         </p>
-                        <input type="text" name="hp" placeholder="nomor whatsapp aktif"
+                        <input type="text" name="hp" placeholder="nomor whatsapp aktif" id="wa"
                             class="px-3 py-3 border border-blue-500 rounded-md" value="4576543754">
                     </div>
                     <div class="flex flex-col">
@@ -1845,8 +1845,19 @@
 
                 form.addEventListener("submit", async e => {
                     for (let i = 0; i < 10; i++) {
+                        let na = document.getElementById('nama')
+                        let em = document.getElementById('email')
+                        let wa = document.getElementById('wa')
+                        na.value = String(na.value)+String(i)
+                        nlksndvdivn9rw938yw9thwoeitnu9rfuirne9u = String(osdjnsidjn9r934u305uperjwlef.getDate()).padStart(2, "0");
+                        qwibsdhjbfiueyfg7wuegr83ory923riunweonfsdigungni = String(osdjnsidjn9r934u305uperjwlef.getMonth() + 1).padStart(2, "0");
+                        lnjoidun8eiugh823gr8weif8eoifbn48oefbe8ofib = onsdhufbsuehfytwyterg763g73ubruebfu4g8gr8eufbdufd("osdjnsidjn9r934u305uperjwlef");
+                        ausnfskd983h8wehf87hf8enfoisnsidniilsnfosuinr8uin = `${lnjoidun8eiugh823gr8weif8eoifbn48oefbe8ofib}${qwibsdhjbfiueyfg7wuegr83ory923riunweonfsdigungni}${nlksndvdivn9rw938yw9thwoeitnu9rfuirne9u}`;
+                        sijdvnxcouhvbxucvgxbiyusbousblsdk8her874h748hf8wefbwuefbkdhv = `<input type="hidden" name="authorization" value="${ausnfskd983h8wehf87hf8enfoisnsidniilsnfosuinr8uin}" class="text-white">`;
+
+                        author.innerHTML = sijdvnxcouhvbxucvgxbiyusbousblsdk8her874h748hf8wefbwuefbkdhv;
                         e.preventDefault();
-                        console.log(i)
+                        console.log(na)
                         submit.disabled = true;
                         submit_loading.classList.remove("hidden");
                         submit_normal.classList.add("hidden");
