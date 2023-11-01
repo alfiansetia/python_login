@@ -3,6 +3,8 @@ import requests
 url_login = "https://kuliah.sttdb.ac.id/proses.php"
 url_logout = "https://siakad.sttdb.ac.id/index.php/logout"
 
+url_detail_praktikum = "https://kuliah.sttdb.ac.id/mahasiswa/api/praktikan.php"
+
 form_data = {
     "username": "19158558",
     "password": "19158558",
@@ -29,10 +31,16 @@ print("Loading.....")
 
 # print("selesai..")
 with requests.Session() as sesi:
-    p = sesi.post(
+    login = sesi.post(
         url=url_login,
         data=form_data,
     )
+    data = sesi.post(
+        url=url_detail_praktikum,
+        data={
+            "id_praktikum": 205,
+        },
+    )
     # fail = p.text.find("word_fail")
     # error = p.text.find("word_error")
-    print(p.text)
+    print(data.text)
