@@ -1,46 +1,83 @@
 import requests
+import json
+from prettytable import PrettyTable
 
-url_login = "https://kuliah.sttdb.ac.id/proses.php"
-url_logout = "https://siakad.sttdb.ac.id/index.php/logout"
-
+url_all_data = "https://kuliah.sttdb.ac.id/mahasiswa/api/praktikum.php"
 url_detail_praktikum = "https://kuliah.sttdb.ac.id/mahasiswa/api/praktikan.php"
 
 form_data = {
-    "username": "19158558",
-    "password": "19158558",
+    "username": "nim",
+    "password": "nim",
 }
-word_fail = "Username atau Password salah"
-print("Loading.....")
-# for x in tgl:
-#     for y in bulan:
-#         for z in tahun:
-#             pas = z + y + x
-#             p = requests.post(
-#                 url=url_login,
-#                 data={
-#                     "act": "login",
-#                     "username": "xxx",
-#                     "password": pas,
-#                 },
-#             )
-#             fail = p.text.find(word_fail)
-#             error = p.text.find(word_error)
-#             if int(fail) < 0 and int(error) < 0:
-#                 print("Berhasil, Pass=" + pas)
-#                 break
+jarkom = 201
+pemr = 205
 
-# print("selesai..")
+while True:
+    try:
+        print("Jarkom : 201, Pemrograman Terstruktur : 205")
+        num = int(input("Masukkan ID Praktikum: "))
+        if num > 0:
+            break
+        else:
+            print("Angka harus lebih besar dari nol.")
+    except ValueError:
+        print("Input tidak valid. Harap masukkan angka yang valid.")
+
+print("Loading.....")
+
 with requests.Session() as sesi:
-    login = sesi.post(
-        url=url_login,
-        data=form_data,
-    )
+    # login = sesi.post(
+    #     url=url_login,
+    #     data=form_data,
+    # )
     data = sesi.post(
         url=url_detail_praktikum,
         data={
-            "id_praktikum": 205,
+            "id_praktikum": num,
         },
     )
-    # fail = p.text.find("word_fail")
-    # error = p.text.find("word_error")
-    print(data.text)
+    parsed_data = json.loads(data.text)
+    # print(parsed_data)
+    i = 1
+    if len(parsed_data["data"]) > 0:
+        table = PrettyTable()
+        table.field_names = ["NIM", "NAME", "BAYAR", "MK", "kode"]
+        table.align["NAME"] = "l"
+        table.align["MK"] = "l"
+        count_bayar = 0
+        count_belum = 0
+        for dt in parsed_data["data"]:
+            i += 1
+            if dt["status_bayar"] == "sudah":
+                count_bayar += 1
+            elif dt["status_bayar"] == "belum":
+                count_belum += 1
+            table.add_row(
+                [
+                    dt["nim"],
+                    dt["nama"],
+                    dt["status_bayar"],
+                    dt["nama_mk"],
+                    dt["kode"],
+                ],
+            )
+        table.add_row(
+            ["", "", "", "", ""],
+            divider=True,
+        )
+        table.add_row(
+            ["TOTAL", len(parsed_data["data"]), "", "", ""],
+            divider=True,
+        )
+        table.add_row(
+            ["BAYAR", count_bayar, "", "", ""],
+            divider=True,
+        )
+        table.add_row(
+            ["BELUM", count_belum, "", "", ""],
+            divider=True,
+        )
+
+        print(table)
+    else:
+        print("Data Not Found!")
