@@ -10,7 +10,7 @@ with requests.Session() as sesi:
     login_data = {
         'csrf_token': csrf_token,
         'db': 'MAP_LIVE',
-        'login': 'alfian.setia100@gmail.com',
+        'login': 'csdd@gmail.com',
         'password': '123456'
     }
     p = sesi.post(url_login, data=login_data)
