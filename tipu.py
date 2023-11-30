@@ -28,16 +28,22 @@ with requests.Session() as sesi:
             "areacode": "+86",
             "verify_code": ""
         }
-        data = sesi.post(
-            url=url_reg,
-            json=form,
-            headers={
-                'User-Agent' : "PostmanRuntime/7.35.0",
-                'Accept': 'application/json',
-            }
-        )
-        parsed_data = json.loads(data.text)
+        header = {
+            'User-Agent' : "PostmanRuntime/7.35.0",
+            'Accept': 'application/json',
+        }
+        proxy = {
+            'http': 'http://192.168.4.225:3128',
+            'https': 'http://192.168.4.225:3128'
+        }
         try:
+            data = sesi.post(
+                url=url_reg,
+                json=form,
+                headers=header,
+                proxies=proxy
+            )
+            parsed_data = json.loads(data.text)
             print(parsed_data['D'])
         except Exception as e:
             print('Error program : ' + str(e))
