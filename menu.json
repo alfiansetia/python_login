@@ -1,0 +1,263 @@
+[
+  {
+    "id": 10860,
+    "item_name": "MIE+GACOAN+LV+1",
+    "item_price": 11000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "4756478f11ffd79b7070b2a4edbd9bd2"
+  },
+  {
+    "id": 10861,
+    "item_name": "MIE+GACOAN+LV+2",
+    "item_price": 11000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "4066ebdcd0d3f52e93975245ed237ae7"
+  },
+  {
+    "id": 10859,
+    "item_name": "MIE+GACOAN+LV+0",
+    "item_price": 11000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "0de848bcce389ca4c9e776919385818e"
+  },
+  {
+    "id": 10866,
+    "item_name": "MIE+GACOAN+LV+4",
+    "item_price": 11000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "e63d26ff76fa519b49bdbcda3afb80c8"
+  },
+  {
+    "id": 10880,
+    "item_name": "MIE+GACOAN+LV+6",
+    "item_price": 12000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "d4ed96dea002e346ae84fcefe70243ae"
+  },
+  {
+    "id": 10881,
+    "item_name": "MIE+GACOAN+LV+8",
+    "item_price": 12000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "e4f56ea99433f816791acab5beea7e82"
+  },
+  {
+    "id": 10868,
+    "item_name": "MIE+SUIT",
+    "item_price": 11000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "b0493fd7bb75b80d69b2c74f72ab018f"
+  },
+  {
+    "id": 10869,
+    "item_name": "MIE+HOMPIMPA+LV+1",
+    "item_price": 11000,
+    "extras": [],
+    "variants": null,
+    "quantity": 2,
+    "item_key": "1f12563dc05d79e00b979cd331934133"
+  },
+  {
+    "id": 10871,
+    "item_name": "MIE+HOMPIMPA+LV+3",
+    "item_price": 11000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "294c57742060241375e55578f4b68e55"
+  },
+  {
+    "id": 10870,
+    "item_name": "MIE+HOMPIMPA+LV+2",
+    "item_price": 11000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "4951ed00860bbc290f4ecba989e18587"
+  },
+  {
+    "id": 10882,
+    "item_name": "MIE+HOMPIMPA+LV+6",
+    "item_price": 12000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "09843d9de94df6dcf13eb8641f5b9566"
+  },
+  {
+    "id": 10883,
+    "item_name": "MIE+HOMPIMPA++LV+8",
+    "item_price": 12000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "2b7912c44dc613eb6a8f2af793d67d22"
+  },
+  {
+    "id": 10877,
+    "item_name": "UDANG+KEJU",
+    "item_price": 10000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "fffabb09817440194897a7fc7ca48596"
+  },
+  {
+    "id": 10878,
+    "item_name": "UDANG+RAMBUT",
+    "item_price": 10000,
+    "extras": [],
+    "variants": null,
+    "quantity": 2,
+    "item_key": "cee19cfee93f58fd36f485597c332032"
+  },
+  {
+    "id": 10884,
+    "item_name": "LUMPIA+UDANG",
+    "item_price": 10000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "755897312e67d7cd187de3a909c1994a"
+  },
+  {
+    "id": 10885,
+    "item_name": "PANGSIT+GORENG",
+    "item_price": 11000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "5f81287b5c4cfb1f49b2b7efd31f0db2"
+  },
+  {
+    "id": 10879,
+    "item_name": "SIOMAY",
+    "item_price": 10000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "31e85a53e32947ee069c13722d26aa6b"
+  },
+  {
+    "id": 10886,
+    "item_name": "ES+TEH",
+    "item_price": 4500,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "058b9f9f9cdf2db4fc9d7fa388cc6be3"
+  },
+  {
+    "id": 10887,
+    "item_name": "LEMON+TEA+",
+    "item_price": 6500,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "c726a07afebd87eb95653b7b5ee2ed37"
+  },
+  {
+    "id": 10888,
+    "item_name": "VANILLA+LATTE+",
+    "item_price": 9000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "b5c34d8e22015c4ffc70b938431c47e6"
+  },
+  {
+    "id": 10889,
+    "item_name": "MILO",
+    "item_price": 9000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "da55a31c12afc1e0d5d485aaa286e98d"
+  },
+  {
+    "id": 10890,
+    "item_name": "ORANGE",
+    "item_price": 5500,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "f914a5e0bcf4763bb36a39bd2e9d9709"
+  },
+  {
+    "id": 10891,
+    "item_name": "TEH+TARIK",
+    "item_price": 7000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "d8796767a0fb8eda3bd14900dd6b1856"
+  },
+  {
+    "id": 10892,
+    "item_name": "AIR+MINERAL",
+    "item_price": 4500,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "6869e5f78a83ef410f549fbffd96a5c0"
+  },
+  {
+    "id": 10893,
+    "item_name": "GREEN+THAI+TEA",
+    "item_price": 9000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "b38d517210368938f08305802cb5983a"
+  },
+  {
+    "id": 10894,
+    "item_name": "THAI+TEA+ORI",
+    "item_price": 9000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "7b4d36f6635f0f8fd227bf2c712d64ee"
+  },
+  {
+    "id": 10896,
+    "item_name": "ES+GOBAK+SODOR",
+    "item_price": 10000,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "9dc2939bcd6774e98ce37c5663db0b7f"
+  },
+  {
+    "id": 10898,
+    "item_name": "ES+TEKLEK",
+    "item_price": 6500,
+    "extras": [],
+    "variants": null,
+    "quantity": 2,
+    "item_key": "aae741ad772bc4341a7124e7cbbc3866"
+  },
+  {
+    "id": 10899,
+    "item_name": "SLUKU+BATOK",
+    "item_price": 6500,
+    "extras": [],
+    "variants": null,
+    "quantity": "1",
+    "item_key": "5f6b5171cb6db61b28eff0811c27c851"
+  }
+]
