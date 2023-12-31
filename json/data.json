@@ -1,0 +1,564 @@
+{
+    "product": [
+        {
+            "code": "BIM.120106",
+            "name": "0219 Microderm",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "BIM.120107",
+            "name": "0419 Flat",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "BIM.120105",
+            "name": "0519 Condyloma",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "BIM.120108",
+            "name": "0619 Cone",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "NOX.CONNECTOR-NO",
+            "name": "1/4\" NPT to NOxBOXi Supply Hose Adapters - NO Feed Line Connector",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "BIM.120109",
+            "name": "1038 Cone",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "BIM.120110",
+            "name": "1038 General Purpose",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "SOY.10ul-CPL",
+            "name": "10uL Capillary Pipette (25s) - TCL/TGS/HLS/BHS",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "BDF.110-08-02511-V",
+            "name": "110ltr replacement can. 20ppm Carbon Monoxide balance Air (piCO+)",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "BDF.110-08-04010-V",
+            "name": "110ltr replacement can. 50ppm Carbon Monoxide balance Air (Micro+)",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "NOX.NOXBOXI-SERV-KIT",
+            "name": "12 months service kit - includes: NOXBOXI -BAT, NOXBOXI-WATER-TRAP, NOXBOXI-PUMP, FXS515, FIL011, FIL056, FIL058, FIL060",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "CW.23300097",
+            "name": "14.4V-2200mAh Lithium  Rechargeable Battery",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "PTS.2863",
+            "name": "15\u03bcl Capillary Tubes 25s",
+            "akl": "AKL 20206320027",
+            "akl_exp": "2027-09-19",
+            "desc": "Perubahan Nomor NIE"
+        },
+        {
+            "code": "BIM.120104",
+            "name": "1905 Exocervical",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "BIM.120103",
+            "name": "1910 Exo-Endocervical",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "BIM.120102",
+            "name": "1920 Exo-Endocervical Long",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "BIM.120112",
+            "name": "2004 General Purpose",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "PTS.2864",
+            "name": "20\u03bcl Capillary Tubes 25s",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "NOX.NOXBOXI-SEN-KIT",
+            "name": "24 months service kit - includes: NOXBOX-SERV-KIT, NOXBOXI-NO, NO2 & O2 sensors & NOXBOXI-ZEROSO",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "BIM.120113",
+            "name": "2504 General Purpose",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "BIM.120101",
+            "name": "2507 ExocervicaL Large",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "BIM.120114",
+            "name": "2514 Exo-Endocervical Jumbo",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "BIM.120115",
+            "name": "2526 Exo-Endocervical Jumbo",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "DJO.70036",
+            "name": "30 mm Vacuum Electrode Kit",
+            "akl": "AKL 21403810015",
+            "akl_exp": "2027-02-01",
+            "desc": null
+        },
+        {
+            "code": "DJO.70039",
+            "name": "30 mm Vacuum Sponge Kit",
+            "akl": "AKL 21403810015",
+            "akl_exp": "2027-02-01",
+            "desc": null
+        },
+        {
+            "code": "BIM.120116",
+            "name": "3010 Exocervical XL",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "BIM.120117",
+            "name": "3015 Exocervical XL",
+            "akl": "AKL 21603817956",
+            "akl_exp": "2024-06-22",
+            "desc": null
+        },
+        {
+            "code": "PTS.2865",
+            "name": "30\u03bcl Capillary Tubes 25s",
+            "akl": "AKL 20206320027",
+            "akl_exp": "2027-09-19",
+            "desc": "Perubahan Nomor NIE"
+        },
+        {
+            "code": "BDF.GASTROCHECK-CAL-KIT",
+            "name": "34*ltr Calibration kit - 100ppm Hydrogen 100ppm Methane, 20.9% Air with regulator",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "BDF.034-14-12010-V",
+            "name": "34ltr Calibration Can Filled With 27ltr Gas 100ppm Hydrogen Balance Air",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "3RAY.3303",
+            "name": "3RAY ECG 3-Chn Model 3303",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "GGR.T4530-0",
+            "name": "4.3inch LCD bracket (Metal)",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "GGR.M4154-0",
+            "name": "4.3\u201d LCD (CT043HS40I10R1)- with Touch Panel for I20",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "PTS.2866",
+            "name": "40\u00b5l Capillary Tubes 16s",
+            "akl": "AKL 20206320027",
+            "akl_exp": "2027-09-19",
+            "desc": "Perubahan Nomor NIE"
+        },
+        {
+            "code": "BDF.NTK50",
+            "name": "50 Pcs Mouthpiece + 1 NObreath Flow",
+            "akl": "AKL 20401512319",
+            "akl_exp": "2021-12-06",
+            "desc": null
+        },
+        {
+            "code": "PTS.2134",
+            "name": "50\u00b5l Capillary Tubes 25s",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "DJO.70035",
+            "name": "60 mm Vacuum Electrode Kit",
+            "akl": "AKL 21403810015",
+            "akl_exp": "2027-02-01",
+            "desc": null
+        },
+        {
+            "code": "DJO.70038",
+            "name": "60 mm Vacuum Sponge Kit",
+            "akl": "AKL 21403810015",
+            "akl_exp": "2027-02-01",
+            "desc": null
+        },
+        {
+            "code": "DJO.70034",
+            "name": "90 mm Vacuum Electrode Kit",
+            "akl": "AKL 21403810015",
+            "akl_exp": "2027-02-01",
+            "desc": null
+        },
+        {
+            "code": "DJO.70037",
+            "name": "90 mm Vacuum Sponge Kit",
+            "akl": "AKL 21403810015",
+            "akl_exp": "2027-02-01",
+            "desc": null
+        },
+        {
+            "code": "PTS.3024",
+            "name": "A1CNow+ System 10's",
+            "akl": "AKL 20207320256",
+            "akl_exp": "2027-12-31",
+            "desc": "Perubahan Nomor NIE"
+        },
+        {
+            "code": "PTS.3021",
+            "name": "A1CNow+ System 20's",
+            "akl": "AKL 20207320256",
+            "akl_exp": "2027-12-31",
+            "desc": "Perubahan Nomor NIE"
+        },
+        {
+            "code": "HL.100AC",
+            "name": "AC Adaptor",
+            "akl": "AKL 20403010409",
+            "akl_exp": "2021-04-18",
+            "desc": null
+        },
+        {
+            "code": "RYL.14534107",
+            "name": "ACL Knee Brace (Contact/Full Frame) - LT, L",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14534106",
+            "name": "ACL Knee Brace (Contact/Full Frame) - LT, M",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14534105",
+            "name": "ACL Knee Brace (Contact/Full Frame) - LT, S",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14534108",
+            "name": "ACL Knee Brace (Contact/Full Frame) - LT, XL",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14534109",
+            "name": "ACL Knee Brace (Contact/Full Frame) - LT, XXL",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14534207",
+            "name": "ACL Knee Brace (Contact/Full Frame) - RT, L",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14534206",
+            "name": "ACL Knee Brace (Contact/Full Frame) - RT, M",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14534205",
+            "name": "ACL Knee Brace (Contact/Full Frame) - RT, S",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14534208",
+            "name": "ACL Knee Brace (Contact/Full Frame) - RT, XL",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14534209",
+            "name": "ACL Knee Brace (Contact/Full Frame) - RT, XXL",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14533107",
+            "name": "ACL Knee Brace (Low Contact) - LT, L",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14533106",
+            "name": "ACL Knee Brace (Low Contact) - LT, M",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14533105",
+            "name": "ACL Knee Brace (Low Contact) - LT, S",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14533108",
+            "name": "ACL Knee Brace (Low Contact) - LT, XL",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14533109",
+            "name": "ACL Knee Brace (Low Contact) - LT, XXL",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14533207",
+            "name": "ACL Knee Brace (Low Contact) - RT, L",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14533206",
+            "name": "ACL Knee Brace (Low Contact) - RT, M",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14533205",
+            "name": "ACL Knee Brace (Low Contact) - RT, S",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14533208",
+            "name": "ACL Knee Brace (Low Contact) - RT, XL",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "RYL.14533209",
+            "name": "ACL Knee Brace (Low Contact) - RT, XXL",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        },
+        {
+            "code": "DJO.33371",
+            "name": "ACTUATOR 6,000N - 460MM-225MM",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "DJO.27133",
+            "name": "ADVANCED Carrying Bag",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "DJO.2785",
+            "name": "ADVANCED Vacuum Electrode Module ",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "VAR.864.L",
+            "name": "AFO ( foot guard ) Nr. L",
+            "akl": "AKL 11402911542",
+            "akl_exp": "2024-06-18",
+            "desc": null
+        },
+        {
+            "code": "VAR.864.M",
+            "name": "AFO ( foot guard ) Nr. M",
+            "akl": "AKL 11402911542",
+            "akl_exp": "2024-06-18",
+            "desc": null
+        },
+        {
+            "code": "VAR.864.S",
+            "name": "AFO ( foot guard ) Nr. S",
+            "akl": "AKL 11402911542",
+            "akl_exp": "2024-06-18",
+            "desc": null
+        },
+        {
+            "code": "3A.AP600A",
+            "name": "AIRJOLLIE II Professional",
+            "akl": "AKL 20403413507",
+            "akl_exp": "2019-12-21",
+            "desc": null
+        },
+        {
+            "code": "OTH.112",
+            "name": "ALADDIN Bleaching Enhancer Set ",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "MRID.ALT0102 Kit",
+            "name": "ALT0102 ALT Kit (2*35ml+1*18ml)",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "MES.ANB",
+            "name": "ANALOG BOARD FOR LUNGTEST MOBILE",
+            "akl": null,
+            "akl_exp": null,
+            "desc": null
+        },
+        {
+            "code": "3A.AP1800A",
+            "name": "ATOMIZER",
+            "akl": "AKL 20403411988",
+            "akl_exp": "2025-12-31",
+            "desc": null
+        },
+        {
+            "code": "VAR.142.L",
+            "name": "Abdolumbar Corset (28 cm) Nr. L",
+            "akl": "AKL 11402113554",
+            "akl_exp": "2024-06-18",
+            "desc": null
+        },
+        {
+            "code": "VAR.142.M",
+            "name": "Abdolumbar Corset (28 cm) Nr. M",
+            "akl": "AKL 11402113554",
+            "akl_exp": "2024-06-18",
+            "desc": null
+        },
+        {
+            "code": "VAR.142.S",
+            "name": "Abdolumbar Corset (28 cm) Nr. S",
+            "akl": "AKL 11402113554",
+            "akl_exp": "2024-06-18",
+            "desc": null
+        },
+        {
+            "code": "VAR.142.XL",
+            "name": "Abdolumbar Corset (28 cm) Nr. XL",
+            "akl": "AKL 11402113554",
+            "akl_exp": "2024-06-18",
+            "desc": null
+        },
+        {
+            "code": "VAR.142.XXL",
+            "name": "Abdolumbar Corset (28 cm) Nr. XXL",
+            "akl": "AKL 11402113554",
+            "akl_exp": "2024-06-18",
+            "desc": null
+        },
+        {
+            "code": "VAR.188.1",
+            "name": "Abduction Corset Nr. 1",
+            "akl": null,
+            "akl_exp": null,
+            "desc": "Tidak ada AKL / SUKET"
+        }
+    ]
+}
