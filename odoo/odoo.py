@@ -1,6 +1,11 @@
 import requests
 from prettytable import PrettyTable
 import json
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+ses_id = os.getenv("ODOO_SESSION_ID")
 
 url = 'http://map.integrasi.online:8069/web/dataset/search_read'
 
@@ -9,7 +14,7 @@ headers = {
     'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',
     'content-type': 'application/json',
     'x-requested-with': 'XMLHttpRequest',
-    'Cookie': 'session_id=9aca25cd15da3814484696a4efaccc65f6ca5464'
+    'Cookie': ses_id
 }
 
 data = {
@@ -39,9 +44,10 @@ data = {
             'virtual_available', 
             'uom_id', 
             'active',
-            'x_studio_field_i3XMM'
+            'x_studio_field_i3XMM',
+            'description'
         ],
-        'limit': 80,
+        'limit': 4000,
         'sort': '',
         # 'context': {
         #     'lang': 'en_US',
@@ -72,13 +78,14 @@ if response.status_code == 200:
             "name": record["name"] if record['name'] else None,
             "akl": record["akl_id"][1] if record["akl_id"] else None,
             "akl_exp": record["x_studio_valid_to_akl"] if record["x_studio_valid_to_akl"] else None,
-            "desc": record["x_studio_field_i3XMM"] if record['x_studio_field_i3XMM'] else None, 
+            "desc": record["description"] if record['description'] else None, 
         }
         formatted_data["product"].append(formatted_record)
 
     # print(json.dumps(formatted_data, indent=4))
     with open('json/data.json', 'w') as json_file:
         json.dump(formatted_data, json_file, indent=4)
+    # print('ok')
 
     post = requests.post('https://mapwho.my.id/api/import', headers=headers, json=formatted_data)
     res = post.json()
