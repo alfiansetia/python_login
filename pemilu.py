@@ -112,6 +112,9 @@ while True:
         break
     if user_input == '':
         user_input = old_id
+    elif user_input == '0':
+        user_input = ''
+        old_id = ''
     else:
         old_id = user_input
     try:
