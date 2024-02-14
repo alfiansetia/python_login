@@ -19,6 +19,7 @@ def calculate_percentage(value, total):
 
 
 def get_data(id = ''):
+
     url = 'https://us-central1-kp24-fd486.cloudfunctions.net/hierarchy2'
     headers = {
         'accept': 'application/json',
@@ -38,6 +39,8 @@ def get_data(id = ''):
     else:
         print("Sistem operasi tidak dikenali.")
 
+    print('\n')
+    print('\n')
     response = requests.post(url, headers=headers, json=data)
     if response.status_code == 200:
         dt_json = response.json()
