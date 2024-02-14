@@ -2,6 +2,7 @@ import requests
 from prettytable import PrettyTable
 import json
 import os
+import platform
 
 def format_number(number):
     if number >= 1000:
@@ -28,7 +29,15 @@ def get_data(id = ''):
                 "id": id
             }
         }
-    os.system('cls')
+    platform_name = platform.system()
+
+    if platform_name == 'Windows':
+        os.system('cls')
+    elif platform_name == 'Linux' or platform_name == 'Darwin':
+        os.system('clear')
+    else:
+        print("Sistem operasi tidak dikenali.")
+        
     response = requests.post(url, headers=headers, json=data)
     if response.status_code == 200:
         dt_json = response.json()
