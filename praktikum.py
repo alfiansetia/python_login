@@ -14,7 +14,7 @@ pemr = 205
 
 while True:
     try:
-        print("Jarkom : 201, Pemrograman Terstruktur : 205")
+        print("Jarkom : 201, Pemrograman Terstruktur : 205, Pemrograman Visual : 233")
         num = int(input("Masukkan ID Praktikum: "))
         if num > 0:
             break
