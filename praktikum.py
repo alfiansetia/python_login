@@ -9,7 +9,12 @@ from bs4 import BeautifulSoup
 load_dotenv()
 nim = os.getenv("NIM")
 
-os.system('cls')
+def clear_console():
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
+clear_console()
 url_all_data = "https://kuliah.sttdb.ac.id/mahasiswa/api/praktikum.php"
 url_detail_praktikum = "https://kuliah.sttdb.ac.id/mahasiswa/api/praktikan.php"
 url_html_data = "https://kuliah.sttdb.ac.id/mahasiswa/event/praktikum/"
@@ -43,7 +48,7 @@ with requests.Session() as sesi:
         data = [{"id": element['data-id'], "mk": element['data-mk']} for element in list_praktikan_elements]
 
 def get_data(num):
-    os.system('cls')
+    clear_console()
     with requests.Session() as sesi:
         data = sesi.post(
             url=url_detail_praktikum,
