@@ -78,7 +78,7 @@ def send_wa_message(message):
         'Authorization': fonte_token
     }, json={
         'target' :  group_wa,
-        'message' : 'test message ',
+        'message' : message,
     })
     return res
 
