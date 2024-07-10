@@ -12,6 +12,8 @@ passw = os.getenv("pass_odoo")
 base_url = os.getenv("BASE_URL")
 tele_group_id = os.getenv("TELE_GROUP_ID")
 tele_bot_token = os.getenv("TELE_BOT_TOKEN")
+fonte_token = os.getenv("FONTE_TOKEN")
+group_wa = os.getenv("GROUP_WA")
 length = 0
 
 param = {
@@ -71,6 +73,14 @@ param = {
     "id": 613867950
 }
 
+def send_wa_message(message):
+    res = requests.post('https://api.fonnte.com/send', headers={
+        'Authorization': fonte_token
+    }, json={
+        'target' :  group_wa,
+        'message' : 'test message ',
+    })
+    return res
 
 def send_telegram_message(message):
     url = f'https://api.telegram.org/bot{tele_bot_token}/sendMessage'
@@ -78,8 +88,8 @@ def send_telegram_message(message):
         'chat_id': tele_group_id,
         'text': message
     }
-    response = requests.post(url, data=payload)
-    return response
+    res = requests.post(url, data=payload)
+    return res
 
 
 with requests.Session() as sesi:
@@ -123,6 +133,7 @@ with requests.Session() as sesi:
                 print('Jumlah berubah! kirim notif!')
                 # print(selisih)
                 send_telegram_message('=============New ' + str(selisih) + ' DO!=============')
+                send_wa_message('=============New ' + str(selisih) + ' DO!=============')
                 for i in range(selisih):
                     # print(result['result']['records'][i])
                     text = f"{i+1}. DO : {result['result']['records'][i]['name']}"
@@ -130,6 +141,7 @@ with requests.Session() as sesi:
                     text += f"\nTO : {result['result']['records'][i]['partner_id'][1]}"
                     text += f"\nNote : {result['result']['records'][i]['note_to_wh']}"
                     send_telegram_message(text)
+                    send_wa_message(text)
         else:
             print('Program Stopped!')
             send_telegram_message('=============Program Stopped!=============')
