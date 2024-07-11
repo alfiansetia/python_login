@@ -140,8 +140,8 @@ with requests.Session() as sesi:
                     if(selisih <=3 ):
                         text += f"\nNote : {result['result']['records'][i]['note_to_wh']}"
                     text += '\n\n'
-                send_telegram_message(text)
-                send_wa_message(text)
+                r1 = send_telegram_message(text)
+                r2 = send_wa_message(text)
                 time.sleep(1)
         else:
             print('Program Stopped!')

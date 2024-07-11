@@ -13,3 +13,5 @@ response = requests.post('https://api.fonnte.com/send', headers={
     'target' :  group_wa,
     'message' : 'test message ',
 })
+
+print(response.json())
