@@ -14,7 +14,6 @@ tele_group_id = os.getenv("TELE_GROUP_ID")
 tele_bot_token = os.getenv("TELE_BOT_TOKEN")
 fonte_token = os.getenv("FONTE_TOKEN")
 group_wa = os.getenv("GROUP_WA")
-length = 0
 
 param = {
     "jsonrpc": "2.0",
@@ -132,16 +131,18 @@ with requests.Session() as sesi:
                 length = new_length
                 print('Jumlah berubah! kirim notif!')
                 # print(selisih)
-                send_telegram_message('=============New ' + str(selisih) + ' DO!=============')
-                send_wa_message('=============New ' + str(selisih) + ' DO!=============')
+                text = '=============New ' + str(selisih) + ' DO!=============\n\n'
                 for i in range(selisih):
                     # print(result['result']['records'][i])
-                    text = f"{i+1}. DO : {result['result']['records'][i]['name']}"
+                    text += f"{i+1}. DO : {result['result']['records'][i]['name']}"
                     text += f"\nSO : {result['result']['records'][i]['group_id'][1]}"
                     text += f"\nTO : {result['result']['records'][i]['partner_id'][1]}"
-                    text += f"\nNote : {result['result']['records'][i]['note_to_wh']}"
-                    send_telegram_message(text)
-                    send_wa_message(text)
+                    if(selisih <=3 ):
+                        text += f"\nNote : {result['result']['records'][i]['note_to_wh']}"
+                    text += '\n\n'
+                send_telegram_message(text)
+                send_wa_message(text)
+                time.sleep(1)
         else:
             print('Program Stopped!')
             send_telegram_message('=============Program Stopped!=============')
