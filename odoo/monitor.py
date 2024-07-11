@@ -125,13 +125,13 @@ with requests.Session() as sesi:
             if(length == 0):
                 length = new_length
                 print('Program Start!')
-                send_telegram_message('=============Program Started!=============')
+                send_telegram_message('===Program Started!===')
             if(length < new_length and length > 0):
                 selisih = new_length - length
                 length = new_length
                 print('Jumlah berubah! kirim notif!')
                 # print(selisih)
-                text = '=============New ' + str(selisih) + ' DO!=============\n\n'
+                text = '===New ' + str(selisih) + ' DO!===\n\n'
                 for i in range(selisih):
                     # print(result['result']['records'][i])
                     text += f"{i+1}. DO : {result['result']['records'][i]['name']}"
@@ -145,7 +145,7 @@ with requests.Session() as sesi:
                 time.sleep(1)
         else:
             print('Program Stopped!')
-            send_telegram_message('=============Program Stopped!=============')
+            send_telegram_message('===Program Stopped!===')
             state = False
         print('Jumlah Data : ' + str(length))
 
