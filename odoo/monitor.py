@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 import os
 import time
+import json
 
 load_dotenv()
 email = os.getenv("email")
@@ -90,6 +91,17 @@ def send_telegram_message(message):
     res = requests.post(url, data=payload)
     return res
 
+def read_length_from_file():
+    try:
+        with open('length.json', 'r') as file:
+            data = json.load(file)
+            return data.get('length', 0)
+    except FileNotFoundError:
+        return 0
+
+def write_length_to_file(length):
+    with open('length.json', 'w') as file:
+        json.dump({'length': length}, file)
 
 with requests.Session() as sesi:
     url_login_page = base_url + '/web?db=MAP_LIVE'
@@ -114,7 +126,7 @@ with requests.Session() as sesi:
         'Cookie': f"session_id={session_id}"
     }
 
-    length = 0
+    length = read_length_from_file()
     state = True
 
     while(state):
@@ -124,11 +136,13 @@ with requests.Session() as sesi:
             new_length= result['result']['length']
             if(length == 0):
                 length = new_length
+                write_length_to_file(length)
                 print('Program Start!')
                 send_telegram_message('===Program Started!===')
             if(length < new_length and length > 0):
                 selisih = new_length - length
                 length = new_length
+                write_length_to_file(length)
                 print('Jumlah berubah! kirim notif!')
                 # print(selisih)
                 text = '===New ' + str(selisih) + ' DO!===\n\n'
