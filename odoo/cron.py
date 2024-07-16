@@ -5,6 +5,7 @@ import os
 import time
 import json
 base_path = os.getcwd()
+print(base_path)
 path_session = os.path.join(base_path, 'session.json')
 path_length = os.path.join(base_path, 'length.json')
 
