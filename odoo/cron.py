@@ -4,8 +4,11 @@ from dotenv import load_dotenv
 import os
 import time
 import json
+base_path = os.getcwd()
 
-load_dotenv()
+dotenv_path = os.path.join(base_path, '.env')
+
+load_dotenv(dotenv_path)
 email = os.getenv("email")
 passw = os.getenv("pass_odoo")
 base_url = os.getenv("BASE_URL")
@@ -54,7 +57,7 @@ def send_telegram_message(message):
 
 def read_session_from_file():
     try:
-        with open('session.json', 'r') as file:
+        with open(base_path + '/session.json', 'r') as file:
             data = json.load(file)
             return data.get('session', 0)
     except FileNotFoundError:
@@ -63,7 +66,7 @@ def read_session_from_file():
         return session
 
 def write_session_to_file(session):
-    with open('session.json', 'w') as file:
+    with open(base_path + '/session.json', 'w') as file:
         json.dump({'session': session}, file)
 
 def login_to_odoo():
@@ -83,14 +86,14 @@ def login_to_odoo():
 
 def read_length_from_file():
     try:
-        with open('length.json', 'r') as file:
+        with open(base_path + '/length.json', 'r') as file:
             data = json.load(file)
             return data.get('length', 0)
     except FileNotFoundError:
         return 0
 
 def write_length_to_file(length):
-    with open('length.json', 'w') as file:
+    with open(base_path + '/length.json', 'w') as file:
         json.dump({'length': length}, file)
 
 def main():
