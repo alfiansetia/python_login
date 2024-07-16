@@ -15,6 +15,10 @@ tele_group_id = os.getenv("TELE_GROUP_ID")
 tele_bot_token = os.getenv("TELE_BOT_TOKEN")
 fonte_token = os.getenv("FONTE_TOKEN")
 group_wa = os.getenv("GROUP_WA")
+err_count = 0
+
+state = True
+start = 0
 
 param = {
     "jsonrpc": "2.0",
@@ -103,7 +107,7 @@ def write_length_to_file(length):
     with open('length.json', 'w') as file:
         json.dump({'length': length}, file)
 
-with requests.Session() as sesi:
+def login():
     url_login_page = base_url + '/web?db=MAP_LIVE'
     response = sesi.get(url_login_page)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -117,7 +121,18 @@ with requests.Session() as sesi:
     }
     p = sesi.post(url_login, data=login_data)
     session_id = p.cookies.get('session_id')
+    return session_id
 
+with requests.Session() as sesi:
+    length = read_length_from_file()
+    session_id= ''
+    try:
+        session_id = login()
+        err_count = 0
+    except:
+        err_count = err_count+1
+        print('Error Login')
+        state = False
     headers = {
         'accept': 'application/json, text/javascript, */*; q=0.01',
         'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',
@@ -125,43 +140,51 @@ with requests.Session() as sesi:
         'x-requested-with': 'XMLHttpRequest',
         'Cookie': f"session_id={session_id}"
     }
-
-    length = read_length_from_file()
-    state = True
-
     while(state):
-        response = sesi.post(base_url+'/web/dataset/search_read', headers=headers, json=param)
-        if response.status_code == 200:
-            result = response.json()
-            new_length= result['result']['length']
-            if(length == 0):
-                length = new_length
-                write_length_to_file(length)
-                print('Program Start!')
-                send_telegram_message('===Program Started!===')
-            if(length < new_length and length > 0):
-                selisih = new_length - length
-                length = new_length
-                write_length_to_file(length)
-                print('Jumlah berubah! kirim notif!')
-                # print(selisih)
-                text = '===New ' + str(selisih) + ' DO!===\n\n'
-                for i in range(selisih):
-                    # print(result['result']['records'][i])
-                    text += f"{i+1}. DO : {result['result']['records'][i]['name']}"
-                    text += f"\nSO : {result['result']['records'][i]['group_id'][1]}"
-                    text += f"\nTO : {result['result']['records'][i]['partner_id'][1]}"
-                    if(selisih <=3 ):
-                        text += f"\nNote : {result['result']['records'][i]['note_to_wh']}"
-                    text += '\n\n'
-                r1 = send_telegram_message(text)
-                r2 = send_wa_message(text)
-                time.sleep(1)
-        else:
-            print('Program Stopped!')
-            send_telegram_message('===Program Stopped!===')
+        if(err_count > 3):
+             state = False
+             break
+        try:
+            response = sesi.post(base_url+'/web/dataset/search_read', headers=headers, json=param)
+            if response.status_code == 200:
+                result = response.json()
+                new_length= result['result']['length']
+                if(start == 0 or length == 0):
+                    start = new_length
+                    length = new_length
+                    write_length_to_file(length)
+                    print('Program Start!')
+                    send_telegram_message('===Program Started!===')
+                if(length < new_length and length > 0):
+                    selisih = new_length - length
+                    length = new_length
+                    write_length_to_file(length)
+                    print('Jumlah berubah! kirim notif!')
+                    # print(selisih)
+                    text = '===New ' + str(selisih) + ' DO!===\n\n'
+                    for i in range(selisih):
+                        # print(result['result']['records'][i])
+                        text += f"{i+1}. DO : {result['result']['records'][i]['name']}"
+                        text += f"\nSO : {result['result']['records'][i]['group_id'][1]}"
+                        text += f"\nTO : {result['result']['records'][i]['partner_id'][1]}"
+                        if(selisih <=3 ):
+                            text += f"\nNote : {result['result']['records'][i]['note_to_wh']}"
+                        text += '\n\n'
+                    r1 = send_telegram_message(text)
+                    r2 = send_wa_message(text)
+                    time.sleep(1)
+            print('Jumlah Data : ' + str(length))
+            time.sleep(60)
+            err_count = 0
+        
+        except KeyboardInterrupt:
+            start= 1
             state = False
-        print('Jumlah Data : ' + str(length))
+            print('Program force Stopped!')
+            send_telegram_message('===Program force Stopped!===')
+        except:
+            start = 1
+            err_count = err_count+1
+            print('error')
+            send_telegram_message('===Program Error!===')
 
-        time.sleep(60)
-    
