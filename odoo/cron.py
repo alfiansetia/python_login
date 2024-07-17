@@ -66,7 +66,7 @@ def read_session_from_file():
         with open(path_session, 'r') as file:
             data = json.load(file)
             return data.get('session', 0)
-    except FileNotFoundError:
+    except IOError:
         session = login_to_odoo()
         write_session_to_file(session)
         return session
@@ -95,7 +95,7 @@ def read_length_from_file():
         with open(path_length, 'r') as file:
             data = json.load(file)
             return data.get('length', 0)
-    except FileNotFoundError:
+    except IOError:
         return 0
 
 def write_length_to_file(length):
