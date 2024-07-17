@@ -21,6 +21,7 @@ fonte_token = os.getenv("FONTE_TOKEN")
 group_wa = os.getenv("GROUP_WA")
 time_reload = 5
 send_wa = True
+current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
 param = {
     "jsonrpc": "2.0",
@@ -50,12 +51,14 @@ param = {
 
 def send_wa_message(message):
     res = requests.post('https://api.fonnte.com/send', headers={'Authorization': fonte_token}, json={'target': group_wa, 'message': message})
+    res.raise_for_status()
     return res
 
 def send_telegram_message(message):
     url = f'https://api.telegram.org/bot{tele_bot_token}/sendMessage'
     payload = {'chat_id': tele_group_id, 'text': message}
     res = requests.post(url, data=payload)
+    res.raise_for_status()
     return res
 
 def read_session_from_file():
@@ -111,6 +114,7 @@ def main():
         'Cookie': f"session_id={session_id}"
     }
     response = requests.post(base_url + '/web/dataset/search_read', headers=headers, json=param)
+    response.raise_for_status()
     if response.status_code != 200:
         ses = login_to_odoo()
         write_session_to_file(ses)
@@ -118,7 +122,7 @@ def main():
     try:
         result = response.json()
     except:
-        raise Exception('Error Response!')
+        raise Exception('Error Response from odoo!')
     new_length = result['result']['length']
     if length == 0:
         length = new_length
@@ -145,7 +149,7 @@ def main():
             send_telegram_message(t)
             if(send_wa):
                 send_wa_message(t)
-    print('Jumlah Data : ' + str(length))
+    print(current_time + ' => Jumlah Data : ' + str(length))
 
 if __name__ == "__main__":
     try:
