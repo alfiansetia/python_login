@@ -55,7 +55,7 @@ def send_wa_message(message):
     return res
 
 def send_telegram_message(message):
-    url = f'https://api.telegram.org/bot{tele_bot_token}/sendMessage'
+    url = 'https://api.telegram.org/bot' + str(tele_bot_token) + '/sendMessage'
     payload = {'chat_id': tele_group_id, 'text': message}
     res = requests.post(url, data=payload)
     res.raise_for_status()
@@ -132,7 +132,7 @@ def main():
         length = new_length
         write_length_to_file(length)
         print('Jumlah berubah! kirim notif!')
-        text = f'===New {selisih} DO!===\n\n'
+        text = '===New ' + str(selisih) + ' DO!===\n\n'
         for i in range(selisih):
             text += f"{i+1}. DO : {result['result']['records'][i]['name']}"
             text += f"\nSO : {result['result']['records'][i]['group_id'][1]}"
