@@ -111,7 +111,7 @@ def main():
         'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',
         'content-type': 'application/json',
         'x-requested-with': 'XMLHttpRequest',
-        'Cookie': f"session_id={session_id}"
+        'Cookie': "session_id=" + str(session_id)
     }
     response = requests.post(base_url + '/web/dataset/search_read', headers=headers, json=param)
     response.raise_for_status()
@@ -134,11 +134,11 @@ def main():
         print('Jumlah berubah! kirim notif!')
         text = '===New ' + str(selisih) + ' DO!===\n\n'
         for i in range(selisih):
-            text += f"{i+1}. DO : {result['result']['records'][i]['name']}"
-            text += f"\nSO : {result['result']['records'][i]['group_id'][1]}"
-            text += f"\nTO : {result['result']['records'][i]['partner_id'][1]}"
+            text += str(i+1) +". DO : " + str(result['result']['records'][i]['name'])
+            text += "\nSO : " + str(result['result']['records'][i]['group_id'][1])
+            text += "\nTO : " + str(result['result']['records'][i]['partner_id'][1])
             if selisih <= 3:
-                text += f"\nNote : {result['result']['records'][i]['note_to_wh']}"
+                text += "\nNote : " + str(result['result']['records'][i]['note_to_wh'])
             text += '\n\n'
         send_telegram_message(text)
         if(send_wa):
@@ -155,6 +155,6 @@ if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        ter = f"Error: {e}"
+        ter = "Error: " + str(e)
         print(ter)
         send_telegram_message('===Program Error!===\n'+ ter)
