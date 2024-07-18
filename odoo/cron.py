@@ -152,9 +152,11 @@ def main():
     print(current_time + ' => Jumlah Data : ' + str(length))
 
 if __name__ == "__main__":
+    main_length = read_length_from_file()
     try:
         main()
     except Exception as e:
+        write_length_to_file(main_length)
         ter = "Error: " + str(e)
         print(ter)
         send_telegram_message('===Program Error!===\n'+ ter)
