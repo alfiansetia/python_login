@@ -40,7 +40,7 @@ def main(param):
         print('ADA PROMO!')
         send_telegram_message('ADA PROMO!')
     else:
-        print('No Promo : ' + str(message))
+        print(str(current_time) + ' => No Promo : ' + str(message))
 
 if __name__ == "__main__":
     try:
