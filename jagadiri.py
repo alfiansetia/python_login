@@ -37,8 +37,8 @@ def main(param):
     status = json_res['meta']['status'] 
     message = json_res['meta']['message'] 
     if(status):
-        print('ADA PROMO!')
-        send_telegram_message('ADA PROMO!')
+        print(str(current_time) + ' => ADA PROMO!')
+        send_telegram_message(str(current_time) + ' => ADA PROMO!')
     else:
         print(str(current_time) + ' => No Promo : ' + str(message))
 
