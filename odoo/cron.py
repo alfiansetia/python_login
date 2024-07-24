@@ -114,11 +114,11 @@ def main():
         'Cookie': "session_id=" + str(session_id)
     }
     response = requests.post(base_url + '/web/dataset/search_read', headers=headers, json=param)
-    response.raise_for_status()
     if response.status_code != 200:
         ses = login_to_odoo()
         write_session_to_file(ses)
-        raise Exception('Error from odoo code : ' + str(response.status_code))
+        # raise Exception('Error from odoo code : ' + str(response.status_code))
+    response.raise_for_status()
     try:
         result = response.json()
     except:
