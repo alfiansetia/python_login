@@ -15,7 +15,8 @@ def generate_random_number(length):
     end = (10**length) - 1
     return random.randint(start, end)
 i = 0
-while True:
+state = True
+while state:
     try:
         i = i+1
         with requests.Session() as sesi:
@@ -43,5 +44,8 @@ while True:
                 # print('success')
             except:
                 print('gagal')
+    except KeyboardInterrupt:
+        print('Stopped by user!')
+        state = False
     except :
          print('error')
