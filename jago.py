@@ -34,7 +34,7 @@ i = 0
 error = 0
 state = True
 while state:
-    # try:
+    try:
         i = i+1
         with requests.Session() as sesi:
             headers = {
@@ -76,7 +76,7 @@ while state:
                 'code' : code,
             }
             p = sesi.post(url_pos, data=data_pos, headers=headers)
-            # p.raise_for_status()
+            p.raise_for_status()
             data = p.json()
             if p.status_code != 200:
                 print('Error : ',data['message'])
@@ -94,12 +94,12 @@ while state:
             # except:
             #     print('gagal')
         
-    # except KeyboardInterrupt:
-    #     print('Stopped by user!')
-    #     state = False
-    # except Exception as e :
-    #     print('error : ', e)
-    #     error = error+1
-    #     if error > 3:
-    #         state = False
+    except KeyboardInterrupt:
+        print('Stopped by user!')
+        state = False
+    except Exception as e :
+        print('error : ', e)
+        error = error+1
+        if error > 3:
+            state = False
 
