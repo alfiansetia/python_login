@@ -76,6 +76,8 @@ while state:
                 'code' : code,
             }
             p = sesi.post(url_pos, data=data_pos, headers=headers)
+            print(p.text)
+            state = False
             p.raise_for_status()
             data = p.json()
             if p.status_code != 200:
