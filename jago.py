@@ -59,7 +59,7 @@ while state:
             data_pos = {
                 'name': name,
                 'email': email,
-                'whatsapp': "08" + str(phone),
+                'whatsapp': "+62" + str(phone),
                 'profesi': 'Guru',
                 'discount_code': '',
                 'payment_method': 'bank_transfer',
