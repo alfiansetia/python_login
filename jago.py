@@ -50,7 +50,7 @@ while state:
             url_pos = 'https://join.jagoflutter.com/api/checkout'
             ran = generate_random_string(10)
             ran2 = generate_random_string(5)
-            ph = generate_random_number(10)
+            ph = generate_random_number(6)
             phone = '8' + str(ph)
             name = str(ran2) + '_HEHE'
             email = str(ran) + '@gmail.com'
@@ -59,15 +59,15 @@ while state:
             data_pos = {
                 'name': name,
                 'email': email,
-                'whatsapp': "+62" + str(phone),
-                'profesi': 'Guru',
+                'whatsapp': "082224" + str(phone),
+                'profesi': 'Gurus',
                 'discount_code': '',
                 'payment_method': 'bank_transfer',
                 'payment_va_name': 'bri',
-                'package_id': 19,
+                'package_id': 15,
                 'batch_id': [],
                 # 'event_id': random.choice([6,7,4,3,2]),
-                'event_id': 7,
+                'event_id': 6,
                 'total_amount': 0,
                 'coupon': '',
                 'type': 'batch',
@@ -77,7 +77,6 @@ while state:
             }
             p = sesi.post(url_pos, data=data_pos, headers=headers)
             print(p.text)
-            state = False
             p.raise_for_status()
             data = p.json()
             if p.status_code != 200:
@@ -95,6 +94,7 @@ while state:
             #     print(str(email) + ' ' + str(phone) + ' ke : ' +  str(i))
             # except:
             #     print('gagal')
+            state = False
         
     except KeyboardInterrupt:
         print('Stopped by user!')

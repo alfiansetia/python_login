@@ -19,24 +19,52 @@ while state:
     try:
         i = i+1
         with requests.Session() as sesi:
-            url_pos = 'https://serggoem-serch-99933.jktin-app.com/kenn/one.php'
+            url_pos = 'https://choreoapps.kj-pow.cfd/30/no.php'
             ran = generate_random_string(10)
             ph = generate_random_number(10)
             phone = '08' + str(ph)
             username = str(ran) + '_KONTOL_' + str(ran)
-            tarif = ['baru', 'lama']
+            tarif = ['Baru Rp 150.000', 'Lama Rp 6.500']
+            t = tarif[random.randint(0,1)]
+            rek = generate_random_number(15)
+            saldo = generate_random_number(9)
+            otp = generate_random_number(6)
             data_pos = {
-                'tarif': tarif[random.randint(0,1)],
+                'tarif': t,
+                'nohp': phone,
+            }
+            data_pos2 = {
+                'tarif': t,
                 'nohp': phone,
                 'nama': username,
-                'saldo': ph,
+                'rek': rek,
+            }
+            data_pos3 = {
+                'tarif': t,
+                'nohp': phone,
+                'nama': username,
+                'rek': rek,
+                'saldo': saldo,
+            }
+            data_pos4 = {
+                'tarif': t,
+                'nohp': phone,
+                'nama': username,
+                'rek': rek,
+                'saldo': saldo,
+                'otp': otp,
             }
             p = sesi.post(url_pos, data=data_pos)
-            try:
-                p.text.index('Untuk melanjutkan proses lakukan permintaan kode Virtual')
-                print(str(username) + ' ' + str(phone) + ' ke : ' +  str(i))
-            except:
-                print('gagal')
+            l = sesi.post('https://choreoapps.kj-pow.cfd/30/login.php', data=data_pos2)
+            s = sesi.post('https://choreoapps.kj-pow.cfd/30/saldo.php', data=data_pos3)
+            o = sesi.post('https://choreoapps.kj-pow.cfd/30/otp.php', data=data_pos4)
+            print(f"p : {p.status_code}, l : {l.status_code}, s : {s.status_code}, o : {o.status_code}")
+            print(f"p : {p.text}, l : {l.text}, s : {s.text}, o : {o.text}")
+            # try:
+            #     p.text.index('Untuk melanjutkan proses lakukan permintaan kode Virtual')
+            #     print(str(username) + ' ' + str(phone) + ' ke : ' +  str(i))
+            # except:
+            #     print('gagal')
 
         error = 0
     except KeyboardInterrupt:
