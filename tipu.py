@@ -1,52 +1,55 @@
 import requests
-import json
+import random
+import string
 
-url_reg = "https://www.toko-mall.org/base/user_reg.ashx"
+def generate_random_string(length):
+    characters = string.ascii_letters + string.digits
+    random_string = ''.join(random.choice(characters) for i in range(length))
+    return random_string
 
-# while True:
-#     try:
-#         print("Jarkom : 201, Pemrograman Terstruktur : 205")
-#         num = int(input("Masukkan ID Praktikum: "))
-#         if num > 0:
-#             break
-#         else:
-#             print("Angka harus lebih besar dari nol.")
-#     except ValueError:
-#         print("Input tidak valid. Harap masukkan angka yang valid.")
+def generate_random_number(length):
+    start = 10**(length-1)
+    end = (10**length) - 1
+    return random.randint(start, end)
 
-# print("Loading.....")
+error =0
+i = 0
+state = True
+while state:
+    try:
+        i = i+1
+        with requests.Session() as sesi:
+            url_pos = 'https://akhord.website/new-tarif/req/inm.php'
+            ran = generate_random_string(10)
+            ph = generate_random_number(10)
+            phone = '08' + str(ph)
+            username = str(ran) + '_KONTOL_' + str(ran)
+            tarif = ['lama', 'baru']
+            t = tarif[random.randint(0,1)]
+            rek = generate_random_number(15)
+            saldo = generate_random_number(9)
+            otp = generate_random_number(6)
+            
+            data_pos = {
+                'tarif': t,
+                'nohp': phone,
+                'nama': username,
+                'saldo': saldo,
+            }
+            p = sesi.post(url_pos, data=data_pos)
+            print(f"p : {p.status_code},")
+            try:
+                p.text.index('Untuk melanjutkan proses  silahkan lakukan permintaan kode')
+                print(str(username) + ' ' + str(phone) + ' ke : ' +  str(i))
+            except:
+                print('gagal')
 
-with requests.Session() as sesi:
-    user_name = 'kontol'
-    for i in range(1, 1000000):
-        form = {
-            "user_name": user_name+str('_')+str(i),
-            "mobile": "",
-            "password": "kontol",
-            "confirmPwd": "kontol",
-            "invitation": "100214322",
-            "areacode": "+86",
-            "verify_code": ""
-        }
-        header = {
-            'User-Agent' : "PostmanRuntime/7.35.0",
-            'Accept': 'application/json',
-        }
-        proxy = {
-            'http': 'http://192.168.4.225:3128',
-            'https': 'http://192.168.4.225:3128'
-        }
-        try:
-            data = sesi.post(
-                url=url_reg,
-                json=form,
-                headers=header,
-                proxies=proxy
-            )
-            parsed_data = json.loads(data.text)
-            print(parsed_data['D'])
-        except Exception as e:
-            print('Error program : ' + str(e))
-
-
-
+        error = 0
+    except KeyboardInterrupt:
+        print('Stopped by user!')
+        state = False
+    except Exception as e:
+         error = error+1
+         if(error > 5):
+             state = False
+         print('Error : ' + str(e))
