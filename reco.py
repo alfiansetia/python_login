@@ -28,7 +28,7 @@ while state:
         p.raise_for_status()
         print(f"p: {p.status_code}, ke {i}, calon: {rand_calon}")
         error = 0
-        time.sleep(1)
+        # time.sleep(1)
     except KeyboardInterrupt:
         print('Stopped by user!')
         state = False
