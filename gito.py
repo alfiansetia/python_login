@@ -29,7 +29,7 @@ while state:
             "username": email,
             "password": passw,
             "confirm_password": passw,
-            "sponsor": "S2NWYS"
+            "sponsor": "RR69DQ"
         }
 
         data_pos = {
