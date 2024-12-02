@@ -50,7 +50,7 @@ while state:
             "Referer": "https://google.com"
         })
         p.raise_for_status()
-        print(p.json())
+        print(p.text)
         print(f"p: {p.status_code}, ke {i}, email: {email}")
         error = 0
         time.sleep(random.uniform(3, 10))
