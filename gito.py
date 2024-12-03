@@ -42,6 +42,8 @@ error =0
 i = 0
 state = True
 sponsor = 'BH5SCD'
+delay = False
+debug = False
 while state:
     try:
         user_agent = get_user_agent()
@@ -73,11 +75,17 @@ while state:
             message = 'success'
         except:
             message = 'gagal'
-        # print(p.text)
+            raise ValueError(p.text) 
+
+        if(debug):
+            print(p.text)
+
         print(f"p: {p.status_code}, ke {i}, email: {email}, sponsor: {sponsor}, status: {message}")
         error = 0
         sponsor = login(email, passw)
-#        time.sleep(random.uniform(3, 10))
+        if(delay):
+            time.sleep(random.uniform(3, 10))
+
     except KeyboardInterrupt:
         print('Stopped by user!')
         state = False
