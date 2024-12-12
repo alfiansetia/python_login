@@ -25,7 +25,7 @@ while state:
         a = generate_random_string(5)
         b = generate_random_string(5)
         c = generate_random_number(5)
-        phone = "awokwowkwkwok+"+str('08') + str(generate_random_number(10))
+        phone = str('08') + str(generate_random_number(10))
         email = str(a) +'.'+str(b)+'@gmail.com'
         passw = str(a) +'.'+str(b)
         i = i+1
