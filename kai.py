@@ -71,14 +71,6 @@ param = {
     'infant': 0,
     'submit': 'Cari & Pesan Tiket',
 }
-# 'origination': 'SMT',
-#     'flexdatalist-origination': 'SEMARANG TAWANG BANK JATENG',
-#     'destination': 'BKS',
-#     'flexdatalist-destination': 'BEKASI',
-#     'tanggal': '7-April-2025',
-#     'adult': 3,
-#     'infant': 0,
-#     'submit': 'Cari & Pesan Tiket',
 print(f"Tiket Tgl : {param['tanggal']}")
 print(f"Asal : {param['flexdatalist-origination']}")
 print(f"Tujuan : {param['flexdatalist-destination']}")
